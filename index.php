@@ -46,7 +46,11 @@
             }
         }
     </script>
+<<<<<<< HEAD
     <form id="formID" method="POST" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data"> 
+=======
+    <form id="formID" method="POST" role="form" action="index.php" enctype="multipart/form-data"> 
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
     <div class="panel panel-danger">
     <div class="panel-body">
 
@@ -56,7 +60,11 @@
 
         <div class="col-xs-6">
             <label for="firstname" style="text-align: center;">First Name:</label>
+<<<<<<< HEAD
             <input type="text" class="validate[required,custom[onlyLetterSp]] form-control" id="firstname" name="firstname" value="<?php echo $firstname;?>" placeholder="enter your first name">
+=======
+            <input type="text" class="validate[required,custom[onlyLetterSp]] form-control" id="firstname" name="firstname" value="<?php echo $firstname;?>">
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         </div>
 
         <div class="col-xs-6" style="text-align: center; margin-top: 15px;"><br>
@@ -65,7 +73,11 @@
 
         <div class="col-xs-6">
             <label for="lastname">Last Name:</label>
+<<<<<<< HEAD
             <input type="text" class="form-control validate[required,custom[onlyLetterSp]]" id="lastname" name="lastname" value="<?php echo $lastname;?>" placeholder="enter your last name">
+=======
+            <input type="text" class="form-control validate[required,custom[onlyLetterSp]]" id="lastname" name="lastname" value="<?php echo $lastname;?>">
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         </div>
 
         <div class="col-xs-6" style="margin-top: 25px;" >
@@ -74,12 +86,20 @@
 
         <div class="col-xs-12" style="margin-top: 2px;">
             <label for="homenum">Home Phone Number:</label>
+<<<<<<< HEAD
             <input type="text" class="form-control validate[required,custom[phone]]" id="homenum" name="homenum" value="<?php echo $homenum;?>" placeholder="enter your home phone number">
+=======
+            <input type="text" class="form-control validate[required,custom[phone]]" id="homenum" name="homenum" value="<?php echo $homenum;?>">
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         </div>
 
         <div class="col-xs-12">
             <label for="email">Email:</label>
+<<<<<<< HEAD
             <input type="text" class="form-control validate[required,custom[email]]" id="email" name="email" value="<?php echo $email;?>"placeholder="contact@example.com">
+=======
+            <input type="text" class="form-control validate[required,custom[email]]" id="email" name="email" value="<?php echo $email;?>">
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         </div>
 
         <div class="col-xs-6" style="margin-top: 20px; margin-bottom: 20px;">
@@ -106,7 +126,11 @@
 
         <div class="col-xs-12">
             <label for="empHist">Employment History</label><br>
+<<<<<<< HEAD
             <textarea name="empHist" class="form-control" rows="5" id="emphist" placeholder="Please describe your past work experience."></textarea>
+=======
+            <textarea name="empHist" class="form-control" rows="5" id="emphist"></textarea>
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         </div>
 
         <div class="col-xs-12">
@@ -114,13 +138,17 @@
                 <input type="submit" class="btn btn-default" value="Submit" style="margin-top: 20px; margin-left: -15px; background-color: gray; border: none; color: white;">
             </div>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
     </div>
     </div>
     </form>
 
     <?php
         //data input variables, set to empty
+<<<<<<< HEAD
         $firstname = $lastname = $email = $homenum = $bornInCA = $conmethod = $empHist = "";
 
         function pageRedirect ($page) {
@@ -129,6 +157,10 @@
             exit;
         }
         
+=======
+        //$firstname = $lastname = $email = "";
+
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
         //check if there is input data
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
@@ -200,18 +232,28 @@
                 }
             } 
 
+<<<<<<< HEAD
             //Email: Form submission confirmation sent to user 
             $message = "Hello ".$firstname." ".$lastname.",\n"."Email id"." ".$email."\n";
+=======
+
+            //Email: Form submission confirmation sent to user 
+            $message = "Hello ".$firstname." ".$lastname.",\n"."Email id".$email."\n";
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
 
             $subject ="Thank you for your interest in volunteering with Big Sisters!";
 
             if(mail($email, $subject, $message)){
                 echo "Thank you for your application, we will be emailing you with further information shortly.";
+<<<<<<< HEAD
                 pageRedirect ("/thankyou.html");
+=======
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
             } 
             else{ 
                 echo "There was an error with sending an email to the address you provided, but your data was saved.";
             }
+<<<<<<< HEAD
 
         }
 
@@ -219,6 +261,10 @@
 
 
 
+=======
+        }
+
+>>>>>>> 1bd01628f136fefe646957ac55838d8dc6776717
 ?>
 
 </body>
